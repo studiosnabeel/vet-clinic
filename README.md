@@ -160,6 +160,12 @@ Example:
 - Twitter: [@StudiosNabeel](https://twitter.com/StudiosNabeel)
 - LinkedIn: [@NabeelAKbar](https://www.linkedin.com/in/nabeel-akbar-7a474924a/)
 
+👤 **Jerome Jay**
+
+- GitHub: @githubhandle(https://github.com/187jjay187)
+- Twitter: @twitterhandle(https://twitter.com/187jjay187)
+- LinkedIn: LinkedIn(https://linkedin.com/in/jerome-osman-137605a4)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
