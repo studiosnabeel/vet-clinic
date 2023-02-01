@@ -169,3 +169,6 @@ WHERE v.name='Maisy Smith'
 GROUP BY s.name
 ORDER BY visit_Count DESC
 LIMIT 1;
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 15;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
