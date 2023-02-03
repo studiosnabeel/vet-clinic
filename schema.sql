@@ -21,6 +21,8 @@ CREATE TABLE owners (
     PRIMARY KEY (id)
 );
 
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
 CREATE TABLE species (
     id INT NOT NULL GENERATED ALWAYS AS IDENTITY,
     name VARCHAR(100),
@@ -45,16 +47,9 @@ CREATE TABLE visits (
   animal_id INT,
   vets_id INT, 
   date_of_visits DATE NOT NULL,
-  PRIMARY KEY (animal_id, vets_id,date_of_visits),
   CONSTRAINT fk_visit
     FOREIGN KEY(animal_id) REFERENCES animals(id) ON DELETE CASCADE ,
     FOREIGN KEY(vets_id) REFERENCES vets(id) ON DELETE CASCADE  );
-
-ALTER TABLE animals
-    ADD PRIMARY KEY(id);
-
-ALTER TABLE animals
-    DROP COLUMN species;
 
 ALTER TABLE animals
     ADD COLUMN species_id INT,
@@ -69,3 +64,11 @@ ALTER TABLE animals
     ADD CONSTRAINT fkey_owner
     FOREIGN KEY (owner_id)
     REFERENCES owners(id);
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
+---PERFORMANCE IMPROVEMENT---
+CREATE INDEX animals_id_index ON visits (animals_id);
+CREATE INDEX vets_id_index ON visits (vets_id);
+CREATE INDEX owners_email_index ON owners (id);
